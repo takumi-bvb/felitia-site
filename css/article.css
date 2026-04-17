@@ -1,0 +1,195 @@
+/* ============================================
+   felitia / article.css
+   記事ページ固有スタイル
+   ============================================ */
+
+/* ── Header ── */
+.site-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header a {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.15em;
+}
+
+/* ── Article ── */
+.article-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.article-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.article-title {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.article-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.article-intro {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Content ── */
+.article-container h2 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-primary);
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+.article-container h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.article-container p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+/* ── Price table ── */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.85rem;
+}
+
+.price-table th,
+.price-table td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-table th {
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.price-table td {
+  color: var(--text-secondary);
+}
+
+/* ── Highlight box ── */
+.highlight-box {
+  background: var(--bg-card);
+  border-left: 2px solid var(--accent);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.highlight-box p {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.highlight-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Content list ── */
+.content-list {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.content-list li {
+  padding: 0.6rem 0 0.6rem 1.2rem;
+  position: relative;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.content-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* ── Article CTA ── */
+.article-cta {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.article-cta h2 {
+  border: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.article-cta p {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  font-size: 0.9rem;
+}
+
+.article-cta a {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  transition: all 0.4s ease;
+}
+
+.article-cta a:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .article-container { padding: 3rem 1.5rem 4rem; }
+  .article-cta { padding: 2rem 1.5rem; }
+}
